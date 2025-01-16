@@ -1,0 +1,22 @@
+body{
+    margin-left: 2.75rem; 
+    margin-right: 2.75rem; 
+    margin-top: 2rem;
+}
+.top{
+    border-bottom: 2px solid black;
+}
+
+.img-logo{
+    width: 10rem; 
+    height: 7.5rem
+}
+
+.photo-item{
+    margin: 0 auto;
+    padding: 0rem 2rem ;
+
+}
+
+
+
