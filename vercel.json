@@ -24,7 +24,7 @@
             ]
         }
     ],
-    "buildCommand": "npm run production",
+    "buildCommand": "vite build",
     "outputDirectory": "public",
     "env": {
         "APP_ENV": "@APP_ENV",
