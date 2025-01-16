@@ -1,10 +1,21 @@
 {
     "version": 2,
-    "builds": [],
-    "rewrites": [
+    "builds": [
         {
-            "source": "/(.*)",
-            "destination": "/public/index.php"
+            "src": "public/index.php",
+            "use": "@vercel/php"
         }
-    ]
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/public/index.php"
+        }
+    ],
+    "env": {
+        "APP_ENV": "production",
+        "APP_KEY": "base64:u4nmifeNKtI/iqIuXhurTlj9/f5fZev/kJXWO7dRkxQ=",
+        "APP_DEBUG": "false",
+        "APP_URL": "https://webpro3-9c0eizs8l-faizs-projects-b27a803a.vercel.app/"
+    }
 }
