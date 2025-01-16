@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
         {
-            "src": "public/index.php",
-            "use": "@vercel/static-build"
+            "src": "api/index.php",
+            "use": "@vercel/php"
         }
     ],
     "rewrites": [
         {
             "source": "/(.*)",
-            "destination": "/public/index.php"
+            "destination": "/api/index.php"
         }
     ]
 }
