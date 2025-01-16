@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreign('pengaduan_id')->references('id')->on('pengaduans');
             $table->unsignedBigInteger('tanggapan_id')->nullable();
             $table->foreign('tanggapan_id')->references('id')->on('tanggapans');
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }

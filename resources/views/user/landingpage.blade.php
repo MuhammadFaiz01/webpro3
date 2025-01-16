@@ -31,14 +31,14 @@
 
         /* Handle */
         ::-webkit-scrollbar-thumb {
-          background: #1D4ED8; 
+          background: #1D4ED8;
         }
 
         /* Handle on hover */
         ::-webkit-scrollbar-thumb:hover {
-          background: #1E3A9E; 
+          background: #1E3A9E;
         }
-        
+
         .switch-field {
             display: flex;
             overflow: hidden;
@@ -153,7 +153,7 @@
         @guest
         <div class="pb-20 bg-blue-900 -mt-20 h-[55rem] lg:h-[25rem]" >
         @endguest
-        <div class="pb-20 bg-blue-900 -mt-20 h-[65rem] lg:h-[40rem]" >
+        <div class="pb-20 bg-blue-900 -mt-20 h-[65rem] lg:h-[60rem]" >
             <div class="lg:container mx-auto px-6 lg:px-2">
                 <div class="flex-row lg:flex relative">
 
@@ -249,7 +249,7 @@
                                 <h6 class="text-xl font-semibold mb-5">Pengaduan Terbaru</h6>
                                 {{-- <form id="lets_search" action="" style="" class="mx-auto mt-3"> --}}
                                     <input type="text" class="rounded w-full md:w-36 lg:w-48" id="Input" onkeyup="myFunction()" placeholder="Search for Pengaduan or Category" title="Type Pengaduan or Category" {{count($publicPengaduan) != 0 ? '' : 'disabled'}}>
-                                    
+
                                     <div class="min-h-48 max-h-64 overflow-y-auto overflow-x-hidden mt-3 border-b-2 border-t-2">
                                         <table class="bg-transparent" id="Table">
                                             <tbody>
@@ -264,18 +264,18 @@
                                                                         <path d="M6.002 5.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
                                                                         <path d="M1.5 2A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13zm13 1a.5.5 0 0 1 .5.5v6l-3.775-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12v.54A.505.505 0 0 1 1 12.5v-9a.5.5 0 0 1 .5-.5h13z"/>
                                                                       </svg>
-                                                                    
-                                                                    @endif 
+
+                                                                    @endif
                                                                     {{$p->judul}}
                                                                     <p class="hidden">{{$p->category}} {{$p->isi}} </p>
-                                                                </div> 
+                                                                </div>
                                                             </a>
-                                                        </div> 
+                                                        </div>
                                                         <div>
                                                             <p class="text-xs font-light text-slate-500">{{date('d F Y', strtotime($p->created_at))}}<span class="ml-6">by : {{$p->user->name}}</span></p>
                                                         </div>
                                                     </td>
-                                                </tr>   
+                                                </tr>
                                                 @endforeach
                                             </tbody>
                                         </table>
@@ -511,7 +511,7 @@
             <div class="flex flex-wrap">
                 <div class="w-full lg:w-6/12 px-4">
                     <img src="{{asset('img/logo_pede_nobg.png')}}" alt="" class="w-32 lg:mt-10 lg:ml-10">
-                    
+
                 </div>
                 <div class="w-full lg:w-6/12 px-4">
                     <div class="flex flex-wrap items-top mb-6">
