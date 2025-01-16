@@ -2,49 +2,14 @@
     "version": 2,
     "builds": [
         {
-            "src": "public/index.php",
+            "src": "api/index.php",
             "use": "@vercel/php"
         }
     ],
-    "routes": [
+    "rewrites": [
         {
-            "src": "/build/(.*)",
-            "dest": "/public/build/"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "/public/index.php"
+            "source": "/(.*)",
+            "destination": "/api/index.php"
         }
-    ],
-    "headers": [
-        {
-            "source": "/build/(.*)",
-            "headers": [
-                { "key": "Cache-Control", "value": "max-age=31536000, immutable" }
-            ]
-        }
-    ],
-    "buildCommand": "vite build",
-    "outputDirectory": "public",
-    "env": {
-        "APP_ENV": "@APP_ENV",
-        "APP_DEBUG": "@APP_DEBUG",
-        "APP_URL": "@APP_URL",
-        "APP_KEY": "@APP_KEY",
-        "DB_CONNECTION": "@DB_CONNECTION",
-        "DB_HOST": "@DB_HOST",
-        "DB_PORT": "@DB_PORT",
-        "DB_DATABASE": "@DB_DATABASE",
-        "DB_USERNAME": "@DB_USERNAME",
-        "DB_PASSWORD": "@DB_PASSWORD",
-        "APP_CONFIG_CACHE": "/tmp/config.php",
-        "APP_EVENTS_CACHE": "/tmp/events.php",
-        "APP_PACKAGES_CACHE": "/tmp/packages.php",
-        "APP_ROUTES_CACHE": "/tmp/routes.php",
-        "APP_SERVICES_CACHE": "/tmp/services.php",
-        "VIEW_COMPILED_PATH": "/tmp",
-        "CACHE_DRIVER": "array",
-        "LOG_CHANNEL": "stderr",
-        "SESSION_DRIVER": "cookie"
-    }
+    ]
 }
