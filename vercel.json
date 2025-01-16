@@ -8,7 +8,7 @@
     ],
     "rewrites": [
         {
-            "source": "/(.*)",
+            "src": "/(.*)",
             "destination": "/public/index.php"
         }
     ]
